@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: restaurantreservation
+  data:
+    mongodb:
+      authentication-database: admin
+      auto-index-creation: true
+      host: localhost
+      port: 27017
+      database: restaurantdb
+      username: admin
+      password: 123
