@@ -1,6 +1,9 @@
 package com.restaurantreservation.dto;
 
-public class RestaurantRequest {
+import lombok.*;
+
+@AllArgsConstructor @NoArgsConstructor @Data
+public class RestaurantRequestDTO {
 
     private String name;
     private String Location;

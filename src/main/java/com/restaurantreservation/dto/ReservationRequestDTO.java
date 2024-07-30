@@ -2,7 +2,10 @@ package com.restaurantreservation.dto;
 
 import com.restaurantreservation.entity.Reservation;
 
-public class ReservationRequest {
+import lombok.*;
+
+@AllArgsConstructor @NoArgsConstructor @Data
+public class ReservationRequestDTO {
 
     private String usuarioId;
     private String restaurantId;

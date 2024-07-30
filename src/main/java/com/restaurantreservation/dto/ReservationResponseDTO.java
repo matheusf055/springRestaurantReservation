@@ -2,6 +2,9 @@ package com.restaurantreservation.dto;
 
 import java.time.LocalDateTime;
 
+import lombok.*;
+
+@AllArgsConstructor @NoArgsConstructor @Data
 public class ReservationResponseDTO {
 
     private String id;

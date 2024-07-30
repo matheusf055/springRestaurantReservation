@@ -14,11 +14,15 @@ public class Restaurant {
 
     @MongoId
     private String id;
+
     private String name;
+
     private String location;
+
     private String kindOfFood;
 
     @CreatedDate
     private LocalDateTime createdAt;
+
     private List<Review> reviews;
 }

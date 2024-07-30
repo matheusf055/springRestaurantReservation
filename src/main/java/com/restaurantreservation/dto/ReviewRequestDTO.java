@@ -1,6 +1,9 @@
 package com.restaurantreservation.dto;
 
-public class ReviewRequest {
+import lombok.*;
+
+@AllArgsConstructor @NoArgsConstructor @Data
+public class ReviewRequestDTO {
 
     private String usuarioId;
     private String restaurantId;
