@@ -1,8 +1,8 @@
 package com.restaurantreservation.entity;
 
 import lombok.*;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import java.util.List;
 @AllArgsConstructor @NoArgsConstructor @Data
 public class Restaurant {
 
-    @Id
+    @MongoId
     private String id;
     private String name;
     private String location;

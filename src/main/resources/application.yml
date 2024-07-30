@@ -3,10 +3,5 @@ spring:
     name: restaurantreservation
   data:
     mongodb:
-      authentication-database: admin
+      uri: mongodb://admin:123@localhost:27017/restaurantdb?authSource=admin
       auto-index-creation: true
-      host: localhost
-      port: 27017
-      database: restaurantdb
-      username: admin
-      password: 123
