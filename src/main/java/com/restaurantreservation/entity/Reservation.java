@@ -7,19 +7,24 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.time.LocalDateTime;
 
-@Document(collection = "td_reservation")
+@Document(collection = "tb_review")
 @AllArgsConstructor @NoArgsConstructor @Data
 public class Reservation {
 
     @MongoId
-    private String Id;
+    private String id;
 
     @Indexed(name = "usuario_id_index")
     private String usuarioId;
 
     @Indexed(name = "restaurant_id_index")
-    private String restauranteId;
-    private int rating;
-    private String comment;
-    private LocalDateTime ratingTime;
+    private String restaurantId;
+    private LocalDateTime reservationTime;
+    private int numberOfPeople;
+    private Status status;
+
+    public enum Status{
+        PENDING,
+        RESEVERD
+    }
 }
