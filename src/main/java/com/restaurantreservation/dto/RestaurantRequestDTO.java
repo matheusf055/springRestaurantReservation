@@ -6,6 +6,6 @@ import lombok.*;
 public class RestaurantRequestDTO {
 
     private String name;
-    private String Location;
+    private String location;
     private String kindOfFood;
 }

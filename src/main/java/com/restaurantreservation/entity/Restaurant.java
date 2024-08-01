@@ -1,5 +1,6 @@
 package com.restaurantreservation.entity;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -15,10 +16,13 @@ public class Restaurant {
     @MongoId
     private String id;
 
+    @NotBlank
     private String name;
 
+    @NotBlank
     private String location;
 
+    @NotBlank
     private String kindOfFood;
 
     @CreatedDate
