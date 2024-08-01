@@ -1,5 +1,6 @@
 package com.restaurantreservation.entity;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -16,10 +17,13 @@ public class Customer {
     private String id;
 
     @Indexed(unique = true)
+    @NotBlank
     private String email;
 
+    @NotBlank
     private String name;
 
+    @NotBlank
     private String phoneNumber;
 
     @CreatedDate

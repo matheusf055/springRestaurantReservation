@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -23,6 +24,10 @@ public class CustomerService {
         Customer customer = customerMapperService.toEntity(customerRequestDTO);
         Customer createdCustomer = customerRepository.save(customer);
         return customerMapperService.toResponseDTO(createdCustomer);
+    }
+
+    public List<CustomerResponseDTO> findAll(){
+        return customerRepository.findAll().stream().map(customerMapperService::toResponseDTO).toList();
     }
 
     public Optional<CustomerResponseDTO> findById(String id) {
