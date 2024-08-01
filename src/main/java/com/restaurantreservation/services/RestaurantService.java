@@ -46,6 +46,8 @@ public class RestaurantService {
     }
 
     public void deleteById(String id){
-        restaurantRepository.deleteById(id);
+        Restaurant existingRestaurant = restaurantRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Restaurant not found"));
+        restaurantRepository.delete(existingRestaurant);
     }
 }

@@ -46,6 +46,8 @@ public class CustomerService {
     }
 
     public void deleteById(String id){
-        customerRepository.deleteById(id);
+        Customer existingCustomer = customerRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Customer not found"));
+        customerRepository.delete(existingCustomer);
     }
 }
