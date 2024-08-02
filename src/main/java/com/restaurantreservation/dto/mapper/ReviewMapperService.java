@@ -17,7 +17,7 @@ public class ReviewMapperService {
         return modelMapper.map(reviewRequestDTO, Review.class);
     }
 
-    public ReviewResponseDTO responseDTO(Review review){
+    public ReviewResponseDTO toResponseDTO(Review review){
         return modelMapper.map(review, ReviewResponseDTO.class);
     }
 }

@@ -16,7 +16,7 @@ public class Review {
 
     private String customerId;
 
-    private String restauranteId;
+    private String restaurantId;
 
     private int rating;
 
