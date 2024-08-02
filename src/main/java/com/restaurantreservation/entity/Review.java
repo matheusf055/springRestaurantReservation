@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 public class Review {
 
     @MongoId
-    private String Id;
+    private String id;
 
     private String customerId;
 

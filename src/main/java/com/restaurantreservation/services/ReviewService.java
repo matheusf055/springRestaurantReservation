@@ -57,7 +57,7 @@ public class ReviewService {
            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Restaurant not found");
        }
 
-       List<ReviewDTO> reviews = reviewRepository.findByRestaurantId(restaurantId);
+       List<Review> reviews = reviewRepository.findByRestaurantId(restaurantId);
 
        return reviews.stream()
                .map(review -> modelMapper.map(review, ReviewResponseDTO.class))
