@@ -18,6 +18,7 @@ public class ReservationMapperService {
        reservation.setCustomerId(reservationRequestDTO.getCustomerId());
        reservation.setRestaurantId(reservationRequestDTO.getRestaurantId());
        reservation.setNumberOfPeople(reservationRequestDTO.getNumberOfPeople());
+       reservation.setReservationTime(reservationRequestDTO.getReservationTime());
        return reservation;
     }
 

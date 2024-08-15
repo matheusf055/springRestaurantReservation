@@ -1,7 +1,7 @@
 package com.restaurantreservation.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
-import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
@@ -18,7 +18,7 @@ public class Reservation {
 
     private String restaurantId;
 
-    @CreatedDate
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy HH:mm")
     private LocalDateTime reservationTime;
 
     private int numberOfPeople;
