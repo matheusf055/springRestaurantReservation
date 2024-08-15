@@ -14,7 +14,12 @@ public class ReviewMapperService {
     private final ModelMapper modelMapper;
 
     public Review toEntity(ReviewRequestDTO reviewRequestDTO){
-        return modelMapper.map(reviewRequestDTO, Review.class);
+        Review review = new Review();
+        review.setCustomerId(reviewRequestDTO.getCustomerId());
+        review.setRestaurantId(reviewRequestDTO.getRestaurantId());
+        review.setRating(reviewRequestDTO.getRating());
+        review.setComment(reviewRequestDTO.getComment());
+        return review;
     }
 
     public ReviewResponseDTO toResponseDTO(Review review){
