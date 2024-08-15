@@ -23,7 +23,7 @@ public class Reservation {
 
     private int numberOfPeople;
 
-    private Status status;
+    private Status status = Status.PENDING;
 
     public enum Status{
         PENDING,

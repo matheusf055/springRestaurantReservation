@@ -2,7 +2,6 @@ package com.restaurantreservation.services;
 
 import com.restaurantreservation.dto.RestaurantRequestDTO;
 import com.restaurantreservation.dto.RestaurantResponseDTO;
-import com.restaurantreservation.dto.ReviewDTO;
 import com.restaurantreservation.dto.mapper.RestaurantMapperService;
 import com.restaurantreservation.entity.Restaurant;
 import com.restaurantreservation.entity.Review;
