@@ -8,8 +8,8 @@ import lombok.*;
 public class ReservationResponseDTO {
 
     private String id;
-    private String CustomerId;
-    private String RestaurantId;
+    private String customerId;
+    private String restaurantId;
     private LocalDateTime reservationTime;
     private int numberOfPeople;
     private Status status;
