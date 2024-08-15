@@ -25,8 +25,8 @@ public class Reservation {
 
     private Status status = Status.PENDING;
 
-    public enum Status{
+    public enum Status {
         PENDING,
-        RESEVERD
+        RESERVED
     }
 }

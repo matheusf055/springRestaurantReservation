@@ -23,6 +23,13 @@ public class ReviewMapperService {
     }
 
     public ReviewResponseDTO toResponseDTO(Review review){
-        return modelMapper.map(review, ReviewResponseDTO.class);
+        ReviewResponseDTO dto = new ReviewResponseDTO();
+        dto.setId(review.getId());
+        dto.setCustomerId(review.getCustomerId());
+        dto.setRestaurantId(review.getRestaurantId());
+        dto.setRating(review.getRating());
+        dto.setComment(review.getComment());
+        dto.setRatingTime(review.getRatingTime());
+        return dto;
     }
 }

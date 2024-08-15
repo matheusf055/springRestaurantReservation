@@ -1,7 +1,5 @@
 package com.restaurantreservation.services;
 
-import com.restaurantreservation.dto.CustomerDTO;
-import com.restaurantreservation.dto.ReviewDTO;
 import com.restaurantreservation.dto.ReviewRequestDTO;
 import com.restaurantreservation.dto.ReviewResponseDTO;
 import com.restaurantreservation.dto.mapper.ReviewMapperService;
@@ -70,7 +68,7 @@ public class ReviewService {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Customer not found");
         }
 
-        List<CustomerDTO> customers = reviewRepository.findReviewsByCustomerId(customerId);
+        List<Review> customers = reviewRepository.findReviewsByCustomerId(customerId);
 
         return customers.stream()
                 .map(customer -> modelMapper.map(customer, ReviewResponseDTO.class))
