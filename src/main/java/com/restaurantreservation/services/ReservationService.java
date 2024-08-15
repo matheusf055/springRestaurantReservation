@@ -24,11 +24,15 @@ public class ReservationService {
         return reservationMapperService.toResponseDTO(createdReservation);
     }
 
-    public List<ReservationResponseDTO> getReservationByUser(String customerId){
+    public List<ReservationResponseDTO> findAll(){
+        return reservationRepository.findAll().stream().map(reservationMapperService::toResponseDTO).toList();
+    }
+
+    public List<ReservationResponseDTO> findReservationByCustomerId(String customerId){
         return reservationRepository.findByCustomerId(customerId);
     }
 
-    public List<ReservationResponseDTO> getReservationByRestaurant(String restaurantId){
+    public List<ReservationResponseDTO> findReservationByRestaurantId(String restaurantId){
         return reservationRepository.findByRestaurantId(restaurantId);
     }
 

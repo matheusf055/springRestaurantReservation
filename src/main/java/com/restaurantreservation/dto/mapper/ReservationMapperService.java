@@ -14,7 +14,11 @@ public class ReservationMapperService {
     private final ModelMapper modelMapper;
 
     public Reservation toEntity(ReservationRequestDTO reservationRequestDTO){
-        return modelMapper.map(reservationRequestDTO, Reservation.class);
+       Reservation reservation = new Reservation();
+       reservation.setCustomerId(reservationRequestDTO.getCustomerId());
+       reservation.setRestaurantId(reservationRequestDTO.getRestaurantId());
+       reservation.setNumberOfPeople(reservationRequestDTO.getNumberOfPeople());
+       return reservation;
     }
 
     public ReservationResponseDTO toResponseDTO(Reservation reservation){
