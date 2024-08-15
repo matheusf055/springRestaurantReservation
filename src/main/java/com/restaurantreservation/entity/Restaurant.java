@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Document(collection = "tb_restaurants")
@@ -28,5 +29,5 @@ public class Restaurant {
     @CreatedDate
     private LocalDateTime createdAt;
 
-    private List<Review> reviews;
+    private List<Review> reviews = new ArrayList<>();
 }
