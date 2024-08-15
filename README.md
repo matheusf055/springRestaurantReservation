@@ -17,7 +17,7 @@ Este repositório contém o código-fonte do projeto "Reserva de Restaurantes". 
 
 ### Funcionalidades
 
-- **Gerenciamento de Clientes**: Usuários se registrar para realizar a reserva de restaurantes.
+- **Gerenciamento de Clientes**: Usuários podem se registrar para realizar a reserva de restaurantes.
 - **Gerenciamento de Restaurantes**: Permite a criação, atualização e exclusão de restaurantes.
 - **Gerenciamento de Reservas**: Usuários podem fazer e gerenciar reservas em restaurantes.
 - **Gerenciamento de Avaliações**: Usuários podem deixar e visualizar avaliações para restaurantes.
