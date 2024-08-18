@@ -10,6 +10,7 @@ Este repositório contém o código-fonte do projeto "Reserva de Restaurantes". 
 - **MongoDB**: Banco de dados não relacional para persistência de dados.
 - **Swagger**: Para documentação e testes da API.
 - **Maven**: Gerenciamento de dependências e build do projeto.
+- **JUnit**: Framework para testes unitários em Java.
 - **ModelMapper**: Para conversão entre entidades e DTOs.
 
 ## Estrutura do Projeto
